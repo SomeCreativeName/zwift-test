@@ -1,16 +1,16 @@
 *** Settings ***
 Documentation     Zwift homepage tests
 Library           SeleniumLibrary
+Library           ../keywords/browser_setup.py
+Variables         ../locators/homepage.py
 Suite Teardown    Close All Browsers
 
 *** Variables ***
 ${HOMEPAGE_URL}   http://zwift.com/
-${BROWSER}        chrome
-${NAVBAR_LOGO}    css:#znv-header-logo-link
 
 *** Test Cases ***
 Homepage loads successfully
-    Open Browser        ${HOMEPAGE_URL}     ${BROWSER}
+    Start Browser       ${HOMEPAGE_URL}
     Verify Homepage URL
     Element Should Be Visible       ${NAVBAR_LOGO}
 
