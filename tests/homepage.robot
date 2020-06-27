@@ -6,16 +6,16 @@ Variables         ../locators/homepage.py
 Suite Teardown    Close All Browsers
 
 *** Variables ***
-${HOMEPAGE_URL}   http://zwift.com/
+${HOMEPAGE_URL}   https://zwift.com/
 
 *** Test Cases ***
 Homepage loads successfully
-    Start Browser       ${HOMEPAGE_URL}
+    Start Browser
     Verify Homepage URL
     Element Should Be Visible       ${NAVBAR_LOGO}
 
 *** Keywords ***
 Verify Homepage URL
     ${url}=             Get Location
-    Should Be Equal     ${HOMEPAGE_URL}     ${url
-}
+    Should Be Equal     ${HOMEPAGE_URL}     ${url}
+

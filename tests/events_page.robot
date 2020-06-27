@@ -6,13 +6,10 @@ Variables         ../locators/events_page.py
 Variables         ../locators/homepage.py
 Suite Teardown    Close All Browsers
 
-*** Variables ***
-${HOMEPAGE_URL}   http://zwift.com/
-
 *** Test Cases ***
 Events filters modify number of results
-    Start Browser       ${HOMEPAGE_URL}
-    Click Element       ${NAVBAR_EVENTS_LINK}
+    Start Browser
+    Click Element                    ${NAVBAR_EVENTS_LINK}
     Wait Until Element Is Visible    ${EVENTS_FILTER_APP}
     Count Event Listings
     Select From List By Value        ${SPORT_DROPDOWN}          RUNNING
