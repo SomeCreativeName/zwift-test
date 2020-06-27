@@ -17,4 +17,5 @@ Homepage loads successfully
 *** Keywords ***
 Verify Homepage URL
     ${url}=             Get Location
-    Should Be Equal     ${HOMEPAGE_URL}     ${url}
+    Should Be Equal     ${HOMEPAGE_URL}     ${url
+}
