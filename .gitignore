@@ -3,3 +3,4 @@
 **/report.html
 **/selenium-screenshot-*
 **/__pycache__
+logs/**
